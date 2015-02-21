@@ -1,0 +1,98 @@
+﻿<HBProfile creator="Bate" version="1.1">
+	<Name>Shattered Halls Endless Farm</Name>
+   
+	<MinLevel>1</MinLevel>
+	<MaxLevel>101</MaxLevel>
+   
+	<MinDurability>0.2</MinDurability>
+	<MinFreeBagSlots>1</MinFreeBagSlots>
+	
+	<MailGrey>False</MailGrey>
+	<MailWhite>False</MailWhite>
+	<MailGreen>False</MailGreen>
+	<MailBlue>True</MailBlue>
+	<MailPurple>True</MailPurple>
+   
+	<SellGrey>True</SellGrey>
+	<SellWhite>True</SellWhite>
+	<SellGreen>True</SellGreen>
+	<SellBlue>False</SellBlue>
+	<SellPurple>False</SellPurple>
+   
+	<TargetElites>True</TargetElites>
+	
+	<AvoidMobs>
+		<Mob Name="Summon Enabler Stalker" Entry="53488" />
+	</AvoidMobs>
+	
+	<Blackspots>
+	</Blackspots>
+
+	<Mailboxes>
+	</Mailboxes>
+ 
+	<Vendors>
+	</Vendors>
+
+	<Factions>16 24</Factions>
+	
+	<QuestOrder>
+	<CustomBehavior File="UserSettings" PullDistance="20" KillBetweenHotspots="True" LogoutForInactivity="False" />
+	
+<While Condition="Me.GetReputationLevelWith(947) &lt; Styx.WoWUnitReaction.Exalted">
+			<If Condition="Me.MapId != 540">
+				<CustomBehavior File="MyCTM" X="-310.3718" Y="3088.295" Z="-4.189581"  /> <!-- moves into Shattered Halls instance portal if not already inside -->
+			</If>
+
+			<RunTo X="-21.81126" Y="-0.1822658" Z="-13.14891" />
+			<RunTo X="81.27979" Y="72.23833" Z="-13.22183" />
+			<RunTo X="52.10886" Y="77.5402" Z="-13.22183" />
+			<RunTo X="68.89583" Y="105.5945" Z="-13.22076" /> <!-- pauses here while corridor populates -->
+			<CustomBehavior File="WaitTimer" WaitTime="3000" />
+			<RunTo X="69.57062" Y="268.4425" Z="-13.20204" />
+			<RunTo X="122.4749" Y="262.1388" Z="-13.26919" />
+			<RunTo X="124.0783" Y="238.0915" Z="-45.93591"  /> <!-- falls down into sewers -->
+			<RunTo X="177.2218" Y="187.2516" Z="-32.96069" />
+			<RunTo X="165.4018" Y="264.4959" Z="-13.19619" />
+			<RunTo X="193.2752" Y="267.7448" Z="-13.19479" /> <!-- Grand Warlock Netherkurse will auto-aggro after killing these mobs -->
+			
+			<RunTo X="241.5205" Y="272.9061" Z="-13.20756" />
+			<RunTo X="515.1786" Y="317.1761" Z="1.933324" />
+			<RunTo X="487.6143" Y="234.7653" Z="0.2535897" />
+			<RunTo X="549.4595" Y="230.4285" Z="0.2536227" />
+			<RunTo X="518.8715" Y="218.8443" Z="1.919592" />
+			<RunTo X="516.8181" Y="164.1691" Z="1.937488" />
+			<RunTo X="487.5573" Y="145.5717" Z="0.2500791" />
+			<RunTo X="550.6135" Y="144.366" Z="0.2519099" />
+			<RunTo X="440.7444" Y="58.98592" Z="1.927491" />
+			<RunTo X="420.1831" Y="57.78676" Z="2.281479" />
+			<RunTo X="400.8577" Y="57.87701" Z="-8.025468" />
+			<RunTo X="360.8749" Y="57.69294" Z="-7.643936" />  <!-- kills Warbring O'mrogg -->
+			
+			<RunTo X="373.7049" Y="33.67148" Z="-7.931102" />
+			<CustomBehavior File="MyCTM" X="374.8488" Y="12.38322" Z="1.123178" /> <!-- regular bot movement often gets stuck on these stairs, but using MyCTM works -->
+			<RunTo X="284.1511" Y="-84.01473" Z="2.058319" />
+			<RunTo X="233.5126" Y="-83.9312" Z="4.938627" /> <!-- kills Warchief Kargath Bladefist -->
+			
+			<RunTo X="284.1511" Y="-84.01473" Z="2.058319" /> <!-- starts running back to the entrance -->
+			<RunTo X="233.5126" Y="-83.9312" Z="4.938627" />
+			<RunTo X="365.1609" Y="-73.44892" Z="1.907314" />
+			<RunTo X="294.0529" Y="315.8261" Z="1.917071" />
+			<RunTo X="78.80196" Y="259.3479" Z="-13.20326" />
+			<RunTo X="56.90545" Y="5.055587" Z="-13.20846" />
+			<RunTo X="-40.31413" Y="-17.71658" Z="-13.96378" />
+			<RunTo X="-40.44186" Y="-16.16117" Z="-14.04955" />
+			<CustomBehavior File="MyCTM" X="-42.35762" Y="-28.5776" Z="-13.51446"   /> <!-- go through the instance portal -->
+	
+			<CustomBehavior File="WaitTimer" WaitTime="8000" /> <!-- Gives client time to load -->
+			<CustomBehavior File="RunMacro" Macro="/script ResetInstances()" />
+			<CustomBehavior File="RunMacro" Macro="/script SetDungeonDifficulty(1)" /> <!-- sets dungeons back to "regular" mode for farming, in case it was on Heroic for the last run -->
+</While>			
+	
+	
+	</QuestOrder>
+
+	<ProtectedItems>
+	</ProtectedItems>
+
+</HBProfile>
