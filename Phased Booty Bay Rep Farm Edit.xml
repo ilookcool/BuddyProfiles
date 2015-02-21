@@ -1,0 +1,69 @@
+<HBProfile creator="Bate" version="1.0">
+    <Name>Bloodsail Rep Farm</Name>
+  
+    <MinLevel>1</MinLevel>
+    <MaxLevel>101</MaxLevel>
+    
+    <TargetElites>False</TargetElites>
+
+    <MinDurability>0.2</MinDurability>
+    <MinFreeBagSlots>2</MinFreeBagSlots>
+    
+    <SellGrey>False</SellGrey>
+    <SellWhite>False</SellWhite>
+    <SellGreen>False</SellGreen>
+    <MailWhite>False</MailWhite>
+    <MailGreen>False</MailGreen>
+    <MailBlue>False</MailBlue>
+    <MailPurple>False</MailPurple>
+
+     
+    <SubProfile>
+        <Name>Booty Farm</Name>
+    
+        <MinLevel>1</MinLevel>
+        <MaxLevel>101</MaxLevel>
+    
+        <Mailboxes>
+        </Mailboxes>
+    
+        <Vendors>
+        </Vendors>
+
+        <GrindArea>
+            <Factions>120 119</Factions> 
+            <TargetMinLevel>1</TargetMinLevel> <!-- Target minimum level mob -->
+            <TargetMaxLevel>101</TargetMaxLevel> <!-- Target maximum level mob -->
+             <MaxDistance>20</MaxDistance>   
+	 
+            <Hotspots>
+				<Hotspot X="-14424.62" Y="529.5319" Z="5.155104" />
+				<Hotspot X="-14433.38" Y="457.4192" Z="15.3452" />
+				<Hotspot X="-14466.81" Y="467.8458" Z="15.04841" />
+				<Hotspot X="-14472.83" Y="492.3074" Z="14.9051" />
+				<Hotspot X="-14460.96" Y="488.5706" Z="16.0123" />
+            </Hotspots>
+            
+        </GrindArea>
+    
+        <AvoidMobs>
+            <Mob Name="Brashtide Raider" Entry="43716" />
+			<Mob Name="Booty Bay Bruiser" Entry="43760" />
+			<Mob Name="Auctioneer Kresky" Entry="9858" />
+			<Mob Name="Auctioneer O'reely" Entry="15681" />
+			<Mob Name="Auctioneer Graves" Entry="15677" />
+			<Mob Name="Old Man Heming" Entry="2626" />
+			<Mob Name="Bloodsail Corsair" Entry="43726" />
+			<Mob Name="Flora Silverwind" Entry="908" />
+			<Mob Name="Wigcik" Entry="2842" />
+			<Mob Name="Crazk Sparks" Entry="2838" />
+			<Mob Name="Sly Garrett" Entry="2622" />
+			<Mob Name="Catelyn the Blade" Entry="2542" />
+			<Mob Name="Oglethorpe Obnoticus" Entry="7406" />
+        </AvoidMobs>
+
+        <Blackspots>
+        </Blackspots>
+    
+    </SubProfile>
+</HBProfile>  
